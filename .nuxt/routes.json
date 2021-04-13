@@ -1,0 +1,51 @@
+[
+  {
+    "path": "/",
+    "component": "D:\\\\study\\\\03-03\\\\realworld\\\\pages\\\\layout",
+    "children": [
+      {
+        "path": "",
+        "name": "home",
+        "component": "D:\\\\study\\\\03-03\\\\realworld\\\\pages\\\\home",
+        "_name": "_8395ba02"
+      },
+      {
+        "path": "/login",
+        "name": "login",
+        "component": "D:\\\\study\\\\03-03\\\\realworld\\\\pages\\\\login",
+        "_name": "_08a78549"
+      },
+      {
+        "path": "/register",
+        "name": "register",
+        "component": "D:\\\\study\\\\03-03\\\\realworld\\\\pages\\\\login",
+        "_name": "_08a78549"
+      },
+      {
+        "path": "/profile/:username",
+        "name": "profile",
+        "component": "D:\\\\study\\\\03-03\\\\realworld\\\\pages\\\\profile",
+        "_name": "_56022789"
+      },
+      {
+        "path": "/settings",
+        "name": "settings",
+        "component": "D:\\\\study\\\\03-03\\\\realworld\\\\pages\\\\settings",
+        "_name": "_08fa4b7a"
+      },
+      {
+        "path": "/editor/:slug",
+        "name": "editor",
+        "component": "D:\\\\study\\\\03-03\\\\realworld\\\\pages\\\\editor",
+        "_name": "_008570e6"
+      },
+      {
+        "path": "/article/:slug",
+        "name": "article",
+        "component": "D:\\\\study\\\\03-03\\\\realworld\\\\pages\\\\article",
+        "_name": "_3ccc6ad6"
+      }
+    ],
+    "_name": "_0b8c214a"
+  }
+]
