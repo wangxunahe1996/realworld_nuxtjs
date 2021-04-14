@@ -9,7 +9,20 @@
 			</nuxt-link>
 			<span class="date">{{ article.createdAt | date('MMM DD, YYYY') }}</span>
 		</div>
-		<template v-if="user.username != article.author.username">
+		<template v-if="user && user.username == article.author.username">
+			<nuxt-link
+				class="btn btn-sm btn-outline-secondary"
+				:to="{ name: 'editor', params: { slug: article.slug } }"
+			>
+				<i class="ion-edit"></i> Edit Article
+			</nuxt-link>
+			&nbsp;&nbsp;
+
+			<button class="btn btn-sm btn-outline-danger" @click="onDelete(article.slug)" :disabled="deleteDisabled">
+				<i class="ion-trash-a"></i> Delete Article
+			</button>
+		</template>
+		<template v-else>
 			<button
 				class="btn btn-sm btn-outline-secondary "
 				:class="{ active: article.author.following }"
@@ -32,19 +45,6 @@
 						? `Unavorite Post(${article.favoritesCount})`
 						: `Favorite Post(${article.favoritesCount})`
 				}}
-			</button>
-		</template>
-		<template v-else>
-			<nuxt-link
-				class="btn btn-sm btn-outline-secondary"
-				:to="{ name: 'editor', params: { slug: article.slug } }"
-			>
-				<i class="ion-edit"></i> Edit Article
-			</nuxt-link>
-			&nbsp;&nbsp;
-
-			<button class="btn btn-sm btn-outline-danger" @click="onDelete(article.slug)" :disabled="deleteDisabled">
-				<i class="ion-trash-a"></i> Delete Article
 			</button>
 		</template>
 	</div>

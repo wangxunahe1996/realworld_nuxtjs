@@ -1,22 +1,31 @@
 <template>
 	<div>
-		<form class="card comment-form" @submit.prevent="onPostComment(article.slug)">
-			<div class="card-block">
-				<textarea
-					class="form-control"
-					placeholder="Write a comment..."
-					rows="3"
-					v-model="addComment.body"
-				></textarea>
-			</div>
-			<div class="card-footer">
-				<img :src="user.image" class="comment-author-img" />
-				<button class="btn btn-sm btn-primary" :disabled="addCommentDisabled">
-					Post Comment
-				</button>
-			</div>
-		</form>
+		<template v-if="user">
+			<form class="card comment-form" @submit.prevent="onPostComment(article.slug)">
+				<div class="card-block">
+					<textarea
+						class="form-control"
+						placeholder="Write a comment..."
+						rows="3"
+						v-model="addComment.body"
+					></textarea>
+				</div>
 
+				<div class="card-footer">
+					<img :src="user.image" class="comment-author-img" />
+					<button class="btn btn-sm btn-primary" :disabled="addCommentDisabled">
+						Post Comment
+					</button>
+				</div>
+			</form>
+		</template>
+
+		<template v-else>
+			<p style="display: inherit;">
+				<nuxt-link to="/login">Sign in</nuxt-link> or <nuxt-link to="/register">sign up</nuxt-link> to add
+				comments on this article.
+			</p>
+		</template>
 		<div class="card" v-for="(comment, index) in comments" :key="index">
 			<div class="card-block">
 				<p class="card-text">
@@ -38,7 +47,7 @@
 					{{ comment.author.username }}
 				</nuxt-link>
 				<span class="date-posted">{{ comment.createdAt | date('MMM DD, YYYY') }}</span>
-				<span class="mod-options" v-if="comment.author.username == user.username">
+				<span class="mod-options" v-if="user && comment.author.username == user.username">
 					<button
 						class="ion-trash-a"
 						style="border:0;"
