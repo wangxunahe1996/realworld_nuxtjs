@@ -6,46 +6,38 @@
       {
         "path": "",
         "name": "home",
-        "component": "D:\\\\github\\\\realworld_nuxtjs\\\\realworld_nuxtjs\\\\pages\\\\home",
-        "_name": "_610933c6"
+        "component": "D:\\\\github\\\\realworld_nuxtjs\\\\realworld_nuxtjs\\\\pages\\\\home"
       },
       {
         "path": "/login",
         "name": "login",
-        "component": "D:\\\\github\\\\realworld_nuxtjs\\\\realworld_nuxtjs\\\\pages\\\\login",
-        "_name": "_7f54e53c"
+        "component": "D:\\\\github\\\\realworld_nuxtjs\\\\realworld_nuxtjs\\\\pages\\\\login"
       },
       {
         "path": "/register",
         "name": "register",
-        "component": "D:\\\\github\\\\realworld_nuxtjs\\\\realworld_nuxtjs\\\\pages\\\\login",
-        "_name": "_7f54e53c"
+        "component": "D:\\\\github\\\\realworld_nuxtjs\\\\realworld_nuxtjs\\\\pages\\\\login"
       },
       {
         "path": "/profile/:username",
         "name": "profile",
-        "component": "D:\\\\github\\\\realworld_nuxtjs\\\\realworld_nuxtjs\\\\pages\\\\profile",
-        "_name": "_4b62e53c"
+        "component": "D:\\\\github\\\\realworld_nuxtjs\\\\realworld_nuxtjs\\\\pages\\\\profile"
       },
       {
         "path": "/settings",
         "name": "settings",
-        "component": "D:\\\\github\\\\realworld_nuxtjs\\\\realworld_nuxtjs\\\\pages\\\\settings",
-        "_name": "_00c32f8a"
+        "component": "D:\\\\github\\\\realworld_nuxtjs\\\\realworld_nuxtjs\\\\pages\\\\settings"
       },
       {
         "path": "/editor/:slug",
         "name": "editor",
-        "component": "D:\\\\github\\\\realworld_nuxtjs\\\\realworld_nuxtjs\\\\pages\\\\editor",
-        "_name": "_3dd04294"
+        "component": "D:\\\\github\\\\realworld_nuxtjs\\\\realworld_nuxtjs\\\\pages\\\\editor"
       },
       {
         "path": "/article/:slug",
         "name": "article",
-        "component": "D:\\\\github\\\\realworld_nuxtjs\\\\realworld_nuxtjs\\\\pages\\\\article",
-        "_name": "_7dce5ea2"
+        "component": "D:\\\\github\\\\realworld_nuxtjs\\\\realworld_nuxtjs\\\\pages\\\\article"
       }
-    ],
-    "_name": "_499f1c51"
+    ]
   }
 ]
